@@ -13,13 +13,14 @@ export default class Counters extends Component {
 
   inputHandler = (e)=> {
     this.setState({[e.target.name] : e.target.value})
+    this.context.setData({name: e.target.value})
   }
 
   formHandler = (e)=> {
     e.preventDefault()
     this.context.setData({name: this.state.name})
   }
-  
+
   render() {
     return (
       <>
