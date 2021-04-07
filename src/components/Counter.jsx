@@ -9,7 +9,7 @@ export default class Counter extends Component {
       <UserContextConsumer>
         {(props) => (<div>
             <h3>Welcome child component</h3>
-            User name is {props.name}
+            User name is {props.user.name}
         </div>)}
       </UserContextConsumer>
     )
