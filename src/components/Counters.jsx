@@ -1,19 +1,11 @@
+import React, { Component } from 'react'
 
-import Counter from './Counter';
-const Counters = props => {
-    console.log('counters');
+export default class Counter extends Component {
+  render() {
     return (
-     <div className="container">
-       {props.counters.map(item => (
-           <Counter 
-           onDel={props.delete} 
-           key={item.id} 
-           counter={item} 
-           onDec={props.decrement} 
-           onInc={props.increment}/>
-       ))}
-     </div>
+      <>
+        counter
+      </>
     )
   }
-
-  export default Counters
+}
