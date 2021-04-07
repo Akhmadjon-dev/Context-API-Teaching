@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-
-export default class Counter extends Component {
+import Counter from './Counter';
+export default class Counters extends Component {
   render() {
     return (
       <>
-        counter
+        <Counter />
       </>
     )
   }
