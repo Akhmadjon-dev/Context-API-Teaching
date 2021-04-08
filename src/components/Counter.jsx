@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
-import { UserContextConsumer } from '../context/user'
+// import { ContextConsumer } from '../store/context'
+import Context from '../store/context'
 
 
 
 export default class Counter extends Component {
+  static contextType = Context
+
+
   render() {
     return (
-      <UserContextConsumer>
-        {(props) => (<div>
-            <h3>Welcome child component</h3>
-            User name is {props.user.name}
-        </div>)}
-      </UserContextConsumer>
+      <div>
+        {this.context.name}
+      </div>
     )
   }
 }
